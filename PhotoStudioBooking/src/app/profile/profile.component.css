@@ -1,0 +1,358 @@
+.wholeDiv{
+  background-color: antiquewhite;
+}
+.Wholeprofile{
+
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content:left;
+  height: max-content;
+  padding: 20px 0px;
+
+}
+.my-booking-title{
+  background-color: #000000a1;
+  margin-bottom: 30px;
+  font-size: larger;
+  text-transform: uppercase;
+  font-weight: 600;
+  color:#fff724;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
+  width: max-content;
+  padding: 5px 50px 5px 50px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 80px;
+}
+
+.profile-card {
+  width: 100%;
+  height: 100%;
+  background-color: skyblue;
+  /* border-radius: 10px; */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid white;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+}
+
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.profile-details {
+  text-align: center;
+}
+
+.profile-details h2 {
+  font-size: 20px;
+  color:rgb(36, 36, 36);
+  margin: 10px 0;
+}
+
+.profile-details p {
+  font-size: 16px;
+  color: #464545;
+  margin: 5px 0;
+}
+.my-booking{
+  margin-left: 20px;
+  margin-top: 40px;
+  font-size: larger;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:rgb(69, 24, 24);
+}
+.wholeBookDiv{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  grid-template-columns: auto auto auto;
+  gap:10px;
+  row-gap: 10px;
+
+}
+
+
+footer {
+  /* background-image: url("https://e0.pxfuel.com/wallpapers/247/808/desktop-wallpaper-nature-sunset-yellow-aesthetic-sunset.jpg"); */
+background-image: url("https://4kwallpapers.com/images/wallpapers/sunset-moon-river-mountains-gradient-background-peach-4480x2520-2528.jpg");
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-section {
+  margin-top: 10px;
+  width: 30%;
+}
+.footer-section:nth-child(2) {
+  margin-top: 10px;
+  width: 30%;
+  height: auto;
+  margin-left: 110px;
+}
+.footer-section:nth-child(3) {
+  margin-top: 10px;
+  width: 50%;
+  height: auto;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(225, 236, 142, 0.867);
+  color: rgba(219, 215, 216, 0.867);
+  width: max-content;
+  padding: 0px 10px 5px 0px;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.changeBooking-Button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: red;
+  color: white;
+  width: max-content;
+  padding: 5px 15px;
+  /* font-size: medium; */
+  /* border-radius: 4px; */
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+.payment-title{
+  color: red;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff724;
+  display: flex;
+}
+.paymentForm{
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  margin-left:10px ;
+  margin-right: 10px;
+  /* background-color: rgba(255, 255, 255, 0.629); */
+
+}
+.paymentForm input{
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 5px;
+  width: 90%;
+}
+.payment-button{
+  top: 20px;
+  width: max-content;
+  padding: 5px 10px;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.payment-button:disabled{
+  cursor:not-allowed;
+}
+.payment-button:active{
+  cursor:pointer;
+}
+.Payment-option{
+  margin: 0 auto;
+  align-items: center;
+  justify-content:space-evenly;
+  display: flex;
+}
+.Payment-option-button{
+  background-color: white;
+  border: none;
+  border: 1px solid black;
+  padding: 5px 20px;
+cursor: pointer;
+}
+.error{
+  color: red;
+  margin-top: -10px;
+}
+.bookinfo
+{
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.627);
+  padding:0px 0px 15px 0px;
+  border:1px solid ;
+  border-color: #1d5b5c;
+}
+.bookdiv{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url("/assets/img/payment.png"); */
+  background-size: cover;
+  /* box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.627); */
+  border-bottom: dashed;
+  border-color: #1d5b5c;
+}
+table{
+  background-color: skyblue;
+
+  color: black;
+  width:320px;
+  border-collapse: collapse;
+  border:1px solid rgba(195, 195, 195, 0.67) ;
+  /* border:dashed; */
+
+}
+thead{
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: rgb(87, 87, 164);
+}
+table tr:nth-child(even){
+  background-color: #f9f9f9;
+}
+.booking
+{
+  background-color:#ffffff;
+  color:  rgb(43, 41, 41);
+  border-collapse: collapse;
+}
+.booking thead{
+  border: 1px solid rgba(195, 195, 195, 0.67);
+}
+.booking td{
+  border-bottom: 1px solid rgba(109, 109, 109, 0.37);
+  padding: 5px 10px;
+}
+.card-form{
+  height: auto;
+  padding: 10px 20px;
+  animation: fadeIn 0.8s;
+
+
+
+
+}
+@keyframes fadeIn {
+
+  from {
+		opacity: 0;
+		transform: translate3d(0, -5%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+marquee{
+  color: red;
+  padding-top: 5px;
+  text-transform:initial;
+}
+.Cancel-Button{
+  background-color: rgba(20, 20, 20, 0.979);
+  padding: 5px 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff724;
+}
+
+
+
+
+.popup-message {
+  background-image: url('/assets/img/partyPoper.gif');
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin-top: 200px; */
+  background-color: #ffffff;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid black;
+  border-style: dashed;
+}
+.popup-content .check-circle{
+  width: 130px;
+  height: 130px;
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.popup-content .check-circle i{
+  font-size:60px;
+  color: white;
+}
+
+.popup-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+  cursor: pointer;
+}

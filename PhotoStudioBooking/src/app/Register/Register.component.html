@@ -1,0 +1,67 @@
+<body class="body">
+
+<div class="whole-div">
+  <div>
+    <img src="/assets/img/Studio_card.png" alt="" width="500px" style="border: 2px solid white; border-style: dashed;">
+  </div>
+<div class="container">
+  <div class="header">
+      <h2>Register here</h2>
+  </div>
+
+   <!----------------------------------Register form--------------------------->
+
+  <form class="form" (submit)="submitForm()" [formGroup]="signUpForm1">
+      <div class="form-control">
+          <label><i class="fa fa-user"></i> Name</label>
+          <input type="text" placeholder="Enter your name" name="username"  formControlName="username" required>
+          <div class="error" *ngIf="signUpForm1.controls['username'].dirty && signUpForm1.controls['username'].dirty">
+            <small *ngIf="signUpForm1.controls['username'].errors?.['required']">Please Enter username</small>
+            <small *ngIf="signUpForm1.controls['username'].errors?.['required']">User name-[7-15 characters and number (*no special character*)</small>
+          </div>
+      </div>
+      <div class="form-control">
+          <label><i class="fa fa-phone"></i> Mobile no</label>
+          <input type="text" placeholder="Enter your mobile number" name="mobileno"   formControlName="mobileno" required>
+          <div class="error" *ngIf="signUpForm1.controls['mobileno'].invalid && signUpForm1.controls['mobileno'].dirty">
+            <small *ngIf="signUpForm1.controls['mobileno'].errors?.['required']">Please Enter your mobile no</small>
+            <small *ngIf="signUpForm1.controls['mobileno'].errors?.['pattern']">Please Enter correct mobile no</small>
+          </div>
+      </div>
+      <div class="form-control">
+          <label><i class="fa fa-envelope"></i> Email id</label>
+          <input type="email" placeholder="Enter your email id" name="email"   formControlName="email" required>
+          <div class="error" *ngIf="signUpForm1.controls['email'].invalid && signUpForm1.controls['email'].dirty">
+            <small *ngIf="signUpForm1.controls['email'].errors?.['required']">Please Enter email</small>
+            <small *ngIf="signUpForm1.controls['email'].errors?.['pattern']">Please enter correct email *(gmail only)</small>
+          </div>
+      </div>
+      <div class="form-control">
+          <label><i class="fa fa-lock"></i> Password</label>
+          <input type="password" placeholder="Set password"  name="password"   formControlName="password" required>
+          <div class="error" *ngIf="signUpForm1.controls['password'].invalid && signUpForm1.controls['password'].dirty">
+            <small *ngIf="signUpForm1.controls['password'].errors?.['required']">Please Enter password</small>
+            <small *ngIf="signUpForm1.controls['password'].errors?.['pattern']">7-15 characters-At least one numeric digit and special character</small>
+          </div>
+      </div>
+      <div class="form-control">
+          <label><i class="fa fa-lock"></i> Confirm Password</label>
+          <input type="password" placeholder="Re-enter the password" name="confirmpass"  formControlName="confirmpass" required>
+
+          <div class="error" *ngIf="signUpForm1.controls['confirmpass'].invalid && signUpForm1.controls['confirmpass'].dirty">
+            <small *ngIf="signUpForm1.controls['confirmpass'].errors?.['required']">Please Enter confirmpass</small>
+            <small *ngIf="signUpForm1.controls['confirmpass'].errors?.['ConfirmedValidator']">Please Enter correct confirm password</small>
+          </div>
+
+
+      </div>
+      <button [disabled]="!signUpForm1.valid">Register</button>
+
+      <p>Already have an account? <span routerLink="/login" style="cursor: pointer; text-decoration: underline;">Login</span></p>
+
+  </form>
+
+</div>
+
+</div>
+</body>

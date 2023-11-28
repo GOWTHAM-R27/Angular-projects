@@ -1,0 +1,237 @@
+
+.mainImg{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-right: 3px solid rgba(33, 32, 32, 0.495);
+  padding-right: 60px;
+}
+.img1{
+  width: 500px;
+  height: 310px;
+}
+.prg{
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+width: 600px;
+  text-align: center;
+  margin-left: 20px;
+  font-size:large;
+  color: white;
+
+}
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+}
+.works p {
+  border-bottom: 2px solid #fff724;
+  padding: 10px 20px;
+  font-size: x-large;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.bookNow{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: -50px;
+  padding-bottom:20px ;
+}
+button{
+  background-color: #fff724;
+  border: 1px solid black;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  width: 140px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  animation: animate 1.5s linear infinite;
+}
+button:hover{
+  color: #fff724;
+  background-color: black;
+  border: 1px solid #fff724;
+  animation: none;
+}
+@keyframes animate {
+  0% {
+      opacity: 0.2;
+  }
+
+  50% {
+      opacity: 1;
+      background-color:white;
+  }
+
+  100% {
+      opacity: 0.2;
+  }
+}
+
+
+.price {
+  background-color: #f9f9f9;
+  width: fit-content;
+  padding-bottom: 20px;
+  transition: transform .2s;
+  cursor: pointer;
+
+}
+
+.price:hover {
+  filter: brightness(0.7);
+  transform: scale(1.03);
+
+}
+.priceimg:hover {
+  background-image: url('/assets/img/Frame.png');
+
+}
+.centered {
+  position: absolute;
+ margin: o auto;
+ margin-top: -80px;
+ align-items: center;
+ text-align: center;
+ margin-left: 120px;
+ font-size: xx-large;
+ font-weight: bold;
+  transform: translate(-50%, -50%);
+  color: greenyellow;
+}
+.Pcenter{
+  position: absolute;
+  margin-top: -50px;
+  align-items: center;
+  text-align: center;
+  margin-left: 98px;
+  color: white;
+}
+.superclass{
+  display: flex;
+  flex-direction: column;
+}
+.mainclass{
+  border: 1px solid #fff724;
+  /* backdrop-filter: blur(4px); */
+/* -webkit-backdrop-filter: blur(4px); */
+  display: flex;
+  flex-direction: row;
+  top: 100px;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.241);
+  padding: 50px 0px;
+  border-radius: 10px;
+  width: 90%;
+  margin: 100px auto;
+}
+.mainclass1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ /*ribbon*/
+.mainclass span{
+  position: absolute;
+  top: 115px;
+  left: 70px;
+  width: 150px;
+  height: 150px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+.mainclass span::before{
+  content: 'Travel';
+  position: absolute;
+  width: 200%;
+  color: white;
+  border: 2px solid white;
+  height: 40px;
+  background-color: #626c72;
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  box-shadow: 0 5px 10px rgba(134, 133, 133, 0.1);
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .mainclass {
+    flex-direction: column;
+  }
+  .mainImg {
+    border-right: none;
+    padding-right: 0;
+  }
+  .mainclass1 {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly ;
+  }
+  .img1 {
+    width: 90%;
+    height: auto;
+    margin-left: 0px;
+  }
+  .prg{
+    width: 400px;
+  }
+  .mainclass span{
+  top: 150px;
+  left: 30px;
+  width: 150px;
+  height: 150px;
+  transform: rotate(0deg) translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 490px) {
+
+  .prg {
+    /* width: 60%; */
+    display: flex;
+    width: 100px;
+  }
+  .mainclass1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .price{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .centered {
+    position: relative;
+    text-decoration: none;
+  }
+  .Pcenter {
+    margin-left: 38px;
+  }
+  .mainclass span::before {
+    font-size: small;
+
+  }
+}

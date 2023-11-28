@@ -1,0 +1,127 @@
+.gallery{
+display: flex;
+margin: 0 auto;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+margin-top:3%;
+}
+.slider{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+.images{
+  display: flex;
+  width:580px;
+  height:320px ;
+  transition: all 0.5s ease;
+}
+table{
+  border-spacing: 20px;
+}
+
+.images input{
+  display: none;
+}
+.dots{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.dots label{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin: 5px;
+}
+.dots label:hover{
+  background-color: white;
+}
+.dots:checked{
+  background-color: white;
+}
+
+/* ~ select every class(m1) that is preceded by id*/
+#prewedding1:checked ~ .m1 {
+  margin-left: 0;
+
+}
+#prewedding2:checked ~ .m2 {
+  margin-left: -110%;
+
+}
+#prewedding3:checked ~ .m3 {
+  margin-left: -218%;
+
+}
+#prewedding4:checked ~ .m4 {
+  margin-left: -320%;
+
+}
+#wedding1:checked ~ .wed1 {
+  margin-left: 0;
+}
+#wedding2:checked ~ .wed2 {
+  margin-left: -110%;
+}
+#wedding3:checked ~ .wed3 {
+  margin-left: -218%;
+}
+#wedding4:checked ~ .wed4 {
+  margin-left: -320%;
+}
+#portrait1:checked ~ .port1 {
+  margin-left: 0;
+}
+#portrait2:checked ~ .port2 {
+  margin-left: -110%;
+}
+#portrait3:checked ~ .port3 {
+  margin-left: -218%;
+}
+#portrait4:checked ~ .port4 {
+  margin-left: -320%;
+}
+#event1:checked ~ .e1 {
+  margin-left: 0;
+}
+#event2:checked ~ .e2 {
+  margin-left: -110%;
+}
+#event3:checked ~ .e3 {
+  margin-left: -218%;
+}
+#event4:checked ~ .e4 {
+  margin-left: -320%;
+}
+#product1:checked ~ .product1 {
+  margin-left: 0;
+}
+#product2:checked ~ .product2 {
+  margin-left: -110%;
+}
+#product3:checked ~ .product3 {
+  margin-left: -218%;
+}
+#product4:checked ~ .product4 {
+  margin-left: -320%;
+}
+#travel1:checked ~ .travel1 {
+  margin-left: 0;
+}
+#travel2:checked ~ .travel2 {
+  margin-left: -110%;
+}
+#travel3:checked ~ .travel3 {
+  margin-left: -218%;
+}
+#travel4:checked ~ .travel4 {
+  margin-left: -320%;
+}
+

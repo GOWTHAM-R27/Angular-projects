@@ -1,0 +1,300 @@
+
+<h2>User<span> Details</span></h2>
+<div class="users">
+
+  <!------------------------------User details------------------------------------>
+
+  <div class="userinfo">
+    <table>
+      <thead>
+        <td>NAME</td>
+        <td>EMAIL</td>
+        <td>MOBILE NO</td>
+      </thead>
+      <tr *ngFor="let details of userinfo">
+        <td>{{ details.username }}</td>
+        <td>{{ details.email }}</td>
+        <td>{{ details.mobileno }}</td>
+      </tr>
+    </table>
+    <br>
+
+ <!------------------------------User booking details------------------------------------>
+
+    <p>Booking <span>Details</span></p>
+    <table class="booking">
+      <thead>
+        <tr>
+          <td>NAME</td>
+          <td>PHONE</td>
+          <td>EMAIL</td>
+          <td>DATE</td>
+          <td>PERSONAL ADD</td>
+          <td>EVENT PLACE ADD</td>
+          <td>CATEGORY</td>
+          <td>DAYS</td>
+          <td>AMOUNT</td>
+          <td>BOOKING STATUS</td>
+          <td>ACTION</td>
+          <td>PAYMENT STATUS</td>
+        </tr>
+      </thead>
+      <tr *ngFor="let details1 of bookinginfo">
+        <td>{{ details1.firstName }}</td>
+        <td>{{ details1.mobileno1 }}</td>
+        <td>{{ details1.email }}</td>
+        <td>{{ details1.date }}</td>
+        <td>{{ details1.pAddress }}</td>
+        <td>{{ details1.eAddress }}</td>
+        <td>{{ details1.service }}</td>
+        <td>{{ details1.noOfDays }}</td>
+        <td>{{ details1.totalprice }}</td>
+        <td>{{ details1.status }}</td>
+
+        <td>
+          <button class="confirm-button" *ngIf="details1.status !== 'confirmed'&& details1.status!=='canceled' " (click)="confirmBooking(details1.id)">Confirm</button>
+          <button class="cancel-button" *ngIf="details1.status !== 'canceled'" (click)="cancelBooking(details1.id)">Cancel</button>
+        </td>
+        <td>{{details1.paymentStatus}}</td>
+      </tr>
+    </table>
+    <br>
+
+ <!------------------------------Packages details------------------------------------>
+
+    <p style="color: #fff724;">Packages</p>
+    <table class="booking">
+      <thead>
+        <td>SERVICE NAME</td>
+        <td>PRICE FOR PHOTOS</td>
+        <td>PRICE FOR VIDEOS</td>
+        <td>UPDATE PRICE</td>
+      </thead>
+      <tr>
+        <td>Pre wedding</td>
+        <td>{{ prices[0]?.PreweddingPhoto }}</td>
+        <td>{{ prices[0]?.PreweddingVideo }}</td>
+        <td>
+          <i class="fa fa-edit" (click)="openPreweddingPopupForm()"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>Wedding</td>
+        <td>{{ prices[1]?.WeddingPhoto }}</td>
+        <td>{{ prices[1]?.WeddingVideo }}</td>
+        <td>
+          <i class="fa fa-edit" (click)="openWeddingPopupForm()"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>Portrait</td>
+        <td>{{ prices[2]?.PortraitPhoto }}</td>
+        <td>{{ prices[2]?.PortraitVideo }}</td>
+        <td>
+          <i class="fa fa-edit" (click)="openPortraitPopupForm()"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>Events</td>
+        <td>{{ prices[3]?.EventsPhoto }}</td>
+        <td>{{ prices[3]?.EventsVideo }}</td>
+        <td>
+          <i class="fa fa-edit" (click)="openEventsPopupForm()"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>Products</td>
+        <td>{{ prices[4]?.ProductsPhoto }}</td>
+        <td>{{ prices[4]?.ProductsVideo }}</td>
+        <td>
+          <i class="fa fa-edit" (click)="openProductsPopupForm()"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>Travel</td>
+        <td>{{ prices[5]?.TravelPhoto }}</td>
+        <td>{{ prices[5]?.TravelVideo }}</td>
+        <td>
+          <i class="fa fa-edit" (click)="openTravelPopupForm()"></i>
+        </td>
+      </tr>
+    </table>
+    <br>
+
+ <!------------------------------Discount price details------------------------------------>
+
+    <p>
+      Discount Prices
+    </p>
+    <table class="booking" style="width: 70%;">
+      <thead>
+        <td>DISCOUNT TYPE</td>
+        <td>PRICE</td>
+        <td>UPDATE PRICE</td>
+      </thead>
+      <tr>
+        <td>Basic discount</td>
+        <td>{{ DiscountPrice }}</td>
+        <td>
+          <i class="fa fa-edit" (click)="openBasicDiscountForm()"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>Premium discount</td>
+        <td>{{ PremiumDiscountPrice}}</td>
+        <td>
+          <i class="fa fa-edit" (click)="openPremiumDiscountForm()"></i>
+        </td>
+      </tr>
+    </table>
+
+
+<!------------------------------User feedback details------------------------------------>
+
+    <p>Feedback</p>
+    <table class="booking">
+      <thead>
+        <td>NAME</td>
+        <td>EMAIL</td>
+        <td>FEEDBACK</td>
+      </thead>
+      <tr *ngFor="let details of feedback">
+        <td>{{ details.name }}</td>
+        <td>{{ details.email }}</td>
+        <td>{{ details.feedback }}</td>
+      </tr>
+    </table>
+
+
+  </div>
+</div>
+
+<!--Discount price update form-->
+
+<div class="popup-price-form" *ngIf="showBasicDiscount">
+  <div class="Form-title">
+    <h3>Edit Basic Discount</h3>
+  <i (click)="closeBasicDiscountPopup()" class="fa fa-close"></i>
+
+  </div>
+  <form [formGroup]="updateBasicDiscountForm" (ngSubmit)="updateBasicDiscount()">
+    <label>Discount price</label>
+    <input type="text" [(ngModel)]="DiscountPrice" formControlName="basicDiscount" name="basicDiscount">
+    <button type="submit">Update basic discount</button>
+  </form>
+</div>
+
+<!--Premium discount price update form-->
+
+
+<div class="popup-price-form" *ngIf="showPremiumDiscount">
+  <div class="Form-title">
+    <h3>Edit Premium Discount</h3>
+  <i (click)="closePremiumDiscountPopup()" class="fa fa-close"></i>
+
+  </div>
+  <form [formGroup]="updatePremiumDiscountForm" (ngSubmit)="updatePremiumDiscount()">
+    <label>Discount price</label>
+    <input type="text" [(ngModel)]="PremiumDiscountPrice" formControlName="premiumDiscount" name="premiumDiscount">
+    <button type="submit">Update Premium discount</button>
+  </form>
+</div>
+
+<!---------------Prices update forms--------------->
+
+<!---------------Pre wedding prices update form--------------->
+
+<div class="popup-price-form" *ngIf="showPreweddingForm">
+  <div class="Form-title">
+    <h3>Edit Pre Wedding</h3>
+  <i (click)="closePopup()" class="fa fa-close"></i>
+
+  </div>
+  <form [formGroup]="updatevalues" (ngSubmit)="updatePreweddingPrice()">
+    <label>PreWedding Photo</label>
+    <input type="text" [(ngModel)]="prices[0].PreweddingPhoto" formControlName="preweddingPhoto" name="preweddingPhoto">
+    <label>PreWedding Video</label>
+    <input type="text" [(ngModel)]="prices[0].PreweddingVideo" formControlName="preweddingVideo" name="preweddingVideo">
+    <button type="submit">Update Pre Wedding</button>
+  </form>
+</div>
+
+<!---------------Wedding prices update form--------------->
+
+<div class="popup-price-form" *ngIf="showWeddingForm">
+  <div class="Form-title">
+    <h3>Edit Wedding</h3>
+  <i (click)="closeWeddingPopupForm() " class="fa fa-close"></i>
+  </div>
+  <form [formGroup]="updatevalues" (ngSubmit)="updateWeddingPrice()">
+    <label>Wedding Photo</label>
+    <input type="text" [(ngModel)]="prices[1].WeddingPhoto" formControlName="weddingPhoto" name="preweddingPhoto">
+    <label>Wedding Video</label>
+    <input type="text" [(ngModel)]="prices[1].WeddingVideo" formControlName="weddingVideo" name="preweddingVideo">
+    <button type="submit">Update Wedding</button>
+  </form>
+</div>
+
+<!---------------Portrait prices update form--------------->
+
+<div class="popup-price-form" *ngIf="showPortraitForm">
+  <div class="Form-title">
+    <h3>Edit Portrait</h3>
+  <i (click)="closePortraitPopupForm() " class="fa fa-close"></i>
+  </div>
+  <form [formGroup]="updatevalues" (ngSubmit)="updatePortraitPrice()">
+    <label>Portrait Photo</label>
+    <input type="text" [(ngModel)]="prices[2].PortraitPhoto" formControlName="portraitPhoto" name="preweddingPhoto">
+    <label>Portrait Video</label>
+    <input type="text" [(ngModel)]="prices[2].PortraitVideo" formControlName="portraitVideo" name="preweddingVideo">
+    <button type="submit">Update Portrait</button>
+  </form>
+</div>
+
+<!---------------Events prices update form--------------->
+
+<div class="popup-price-form" *ngIf="showEventsForm">
+  <div class="Form-title">
+    <h3>Edit Events</h3>
+  <i (click)="closeEventsPopupForm() " class="fa fa-close"></i>
+  </div>
+  <form [formGroup]="updatevalues" (ngSubmit)="updateEventsPrice()">
+    <label>Events Photo</label>
+    <input type="text" [(ngModel)]="prices[3].EventsPhoto" formControlName="eventsPhoto" name="preweddingPhoto">
+    <label>Events Video</label>
+    <input type="text" [(ngModel)]="prices[3].EventsVideo" formControlName="eventsVideo" name="preweddingVideo">
+    <button type="submit">Update Events</button>
+  </form>
+</div>
+
+<!---------------Products prices update form--------------->
+
+<div class="popup-price-form" *ngIf="showProductsForm">
+  <div class="Form-title">
+    <h3>Edit Products</h3>
+  <i (click)="closeProductsPopupForm() " class="fa fa-close"></i>
+  </div>
+  <form [formGroup]="updatevalues" (ngSubmit)="updateProductsPrice()">
+    <label>Products Photo</label>
+    <input type="text" [(ngModel)]="prices[4].ProductsPhoto" formControlName="productsPhoto" name="preweddingPhoto">
+    <label>Products Video</label>
+    <input type="text" [(ngModel)]="prices[4].ProductsVideo" formControlName="productsVideo" name="preweddingVideo">
+    <button type="submit">Update Products</button>
+  </form>
+</div>
+
+<!---------------Travel prices update form--------------->
+
+<div class="popup-price-form" *ngIf="showTravelForm">
+  <div class="Form-title">
+    <h3>Edit Travel</h3>
+  <i (click)="closeTravelPopupForm() " class="fa fa-close"></i>
+  </div>
+  <form [formGroup]="updatevalues" (ngSubmit)="updateTravelPrice()">
+    <label>Travel Photo</label>
+    <input type="text" [(ngModel)]="prices[5].TravelPhoto" formControlName="travelPhoto" name="preweddingPhoto">
+    <label>Travel Video</label>
+    <input type="text" [(ngModel)]="prices[5].TravelVideo" formControlName="travelVideo" name="preweddingVideo">
+    <button type="submit">Update Travel</button>
+  </form>
+</div>

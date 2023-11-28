@@ -1,0 +1,288 @@
+<div class="wholediv">
+
+  <!-----------------------------------Whole packages div-------------------------------------->
+
+  <div class="packages">
+
+    <!--------------------Packages table------------------------->
+
+    <table class="packages-prices">
+      <thead>
+        <td>SERVICE NAME</td>
+        <td>PRICE FOR PHOTOS</td>
+        <td>PRICE FOR VIDEOS</td>
+        <td>TOTAL PRICE</td>
+      </thead>
+      <tr>
+        <td>Pre wedding</td>
+        <td>{{ prices[0]?.PreweddingPhoto | currency:'INR'}}</td>
+        <td>{{ prices[0]?.PreweddingVideo | currency:'INR'}}</td>
+        <td>{{ PreweddingTotalPrice | currency:'INR'}}</td>
+
+      </tr>
+      <tr>
+        <td>Wedding</td>
+        <td>{{ prices[1]?.WeddingPhoto | currency:'INR'}}</td>
+        <td>{{ prices[1]?.WeddingVideo | currency:'INR'}}</td>
+        <td>{{ WeddingTotalPrice | currency:'INR'}}</td>
+
+      </tr>
+      <tr>
+        <td>Portrait</td>
+        <td>{{ prices[2]?.PortraitPhoto | currency:'INR' }}</td>
+        <td>{{ prices[2]?.PortraitVideo | currency:'INR'}}</td>
+        <td>{{ PortraitTotalPrice | currency:'INR'}}</td>
+
+      </tr>
+      <tr>
+        <td>Events</td>
+        <td>{{ prices[3]?.EventsPhoto | currency:'INR'}}</td>
+        <td>{{ prices[3]?.EventsVideo | currency:'INR'}}</td>
+        <td>{{ EventsTotalPrice | currency:'INR'}}</td>
+
+      </tr>
+      <tr>
+        <td>Products</td>
+        <td>{{ prices[4]?.ProductsPhoto | currency:'INR'}}</td>
+        <td>{{ prices[4]?.ProductsVideo | currency:'INR'}}</td>
+        <td>{{ ProductsTotalPrice | currency:'INR'}}</td>
+
+      </tr>
+      <tr>
+        <td>Travel</td>
+        <td>{{ prices[5]?.TravelPhoto | currency:'INR'}}</td>
+        <td>{{ prices[5]?.TravelVideo | currency:'INR'}}</td>
+        <td>{{ TravelTotalPrice | currency:'INR'}}</td>
+      </tr>
+      <tr>
+        <td colspan="3"> You can book our studio upto 9 days...</td>
+      </tr>
+    </table>
+
+
+    <!--------------------Discounts------------------------->
+
+    <div class="whole-discount">
+
+      <!-----------------------Basic discount------------------------->
+
+      <div class="discount-1">
+        <div class="discount-contents">
+          <div class="discount-price">
+            <div class="price-amount-outer">
+              <div class="price-amount">
+                <p>{{DiscountTemp | currency:'INR'}}</p>
+              </div>
+            </div>
+
+          </div>
+          <p class="discount-title">Discount</p>
+          <p class="discount-recommend">Recommended for all the services</p>
+          <div class="discount-list">
+            <ul type="none">
+              <li>
+                <p class="Text">Discount for all services</p>
+                <p class="icon-check"><i class="fas fa-check"></i></p>
+              </li>
+              <li>
+                <p class="Text">Only for 2-4 days</p>
+                <p class="icon-check"><i class="fas fa-check"></i></p>
+              </li>
+              <li>
+                <p class="Text">Less than 2 days</p>
+                <p class="icon-cross"><i class="fas fa-times" style="color: red;"></i></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="hover-div">
+
+          <div class="hover-div-head">
+            <img src="/assets/img/discount-2.png" alt=""
+              style="width: 110px; height: 110px; margin-top:20px; margin-left: 10px;">
+            <p>Best Discount</p>
+          </div>
+          <div class="hover-div-content">
+            <p style="color: black;">Amazing discount available inside...</p>
+          </div>
+          <div>
+            <img src="/assets/img/checkThisOut.gif" alt="" style="width: 200px; height: 200px;">
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-----------------------Premium discount------------------------->
+
+      <div class="discount-1">
+        <span></span>
+        <div class="discount-contents">
+          <div class="discount-price-premium">
+            <div class="price-amount-outer-premium">
+              <div class="price-amount-premium">
+                <p>{{PremiumDiscountPriceTemp | currency:'INR'}}</p>
+              </div>
+            </div>
+
+          </div>
+          <p class="discount-title">Discount</p>
+          <p class="discount-recommend">Mostly recommended for more than 4 days Events and Travel</p>
+          <div class="discount-list">
+            <ul type="none">
+              <li>
+                <p class="Text">Discount for all services</p>
+                <p class="icon-check"><i class="fas fa-check"></i></p>
+              </li>
+              <li>
+                <p class="Text">Only for 5-9 days</p>
+                <p class="icon-check"><i class="fas fa-check"></i></p>
+              </li>
+              <li>
+                <p class="Text">Less than 5 days</p>
+                <p class="icon-cross"><i class="fas fa-times" style="color: red;"></i></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="hover-div-premium">
+          <div class="hover-div-head-1">
+            <img src="/assets/img/discount-1.png" alt="" style="width: 140px; height: 140px;">
+            <p>Great discount</p>
+          </div>
+          <div class="hover-div-content">
+            <p>Amazing discount available inside...</p>
+          </div>
+          <div>
+            <img src="/assets/img/checkThisOut.gif" alt="" style="width: 200px; height: 200px;">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!---------------------------------------Booking form------------------------------------------------->
+
+
+<div class="container">
+  <div class="header">
+    <h2>Book now</h2>
+  </div>
+
+  <form class="form" (submit)="bookForm()" [formGroup]="bookForm1">
+    <div class="form-control">
+      <table class="table">
+        <tr>
+          <td><label for="name"> Name:</label></td>
+          <td><input type="text" name="firstName" id="name"
+              formControlName="firstName" placeholder="Enter your name" required>
+            <div class="error" *ngIf="bookForm1.controls['firstName'].invalid&&bookForm1.controls['firstName'].touched">
+              <small *ngIf="bookForm1.controls['firstName'].errors?.['required']">Please Enter firstName</small>
+
+            </div>
+          </td>
+          <td><label for="mobileNo">Mobile no:</label></td>
+          <td><input type="text" placeholder="Enter your mobile number" name="mobileno1" id="mobileNo"
+              formControlName="mobileno1" required>
+            <div class="error" *ngIf="bookForm1.controls['mobileno1'].invalid&&bookForm1.controls['mobileno1'].dirty">
+              <small *ngIf="bookForm1.controls['mobileno1'].errors?.['required']">Please Enter your mobile no</small>
+              <small *ngIf="bookForm1.controls['mobileno1'].errors?.['pattern']">Please Enter correct mobile
+                no</small>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="email">Email id:</label></td>
+
+          <td><input type="email" placeholder="Enter your email id" name="email" id="email"
+               formControlName="email" required readonly>
+            <div class="error" *ngIf="bookForm1.controls['email'].invalid&&bookForm1.controls['email'].dirty">
+              <small *ngIf="bookForm1.controls['email'].errors?.['required']">Please Enter email</small>
+              <small *ngIf="bookForm1.controls['email'].errors?.['pattern']">Please enter correct email</small>
+            </div>
+          </td>
+          <td><label for="date">Date & Time:</label></td>
+          <td><input type="datetime-local" placeholder="select date and time" name="date" id="date"
+              formControlName="date" required>
+
+            <div class="error" *ngIf="bookForm1.controls['date'].invalid&&bookForm1.controls['date'].touched">
+              <small *ngIf="bookForm1.controls['date'].errors?.['required']">Please select the date & time</small>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="pAddress">Permanent address:</label></td>
+          <td><textarea rows="4" cols="26" placeholder="Enter your address" name="pAddress" id="pAddress"
+              formControlName="pAddress" required></textarea>
+            <br>
+            <div class="error" *ngIf="bookForm1.controls['pAddress'].invalid&&bookForm1.controls['pAddress'].touched">
+              <small *ngIf="bookForm1.controls['pAddress'].errors?.['required']">Please Fill this field</small>
+            </div>
+          </td>
+          <td><label for="eAddress">Event place address:</label></td>
+          <td><textarea rows="4" cols="26" placeholder="Enter your address" name="eAddress" id="eAddress"
+              formControlName="eAddress" required></textarea>
+            <br>
+            <div class="error" *ngIf="bookForm1.controls['eAddress'].invalid&&bookForm1.controls['eAddress'].touched">
+              <small *ngIf="bookForm1.controls['eAddress'].errors?.['required']">Please Fill this field</small>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="categories">Category:</label></td>
+          <td>
+            <input type="text" id="categories" name="service" formControlName="service" required readonly>
+            <!-- <div class="error" *ngIf="bookForm1.controls['service'].invalid&&bookForm1.controls['service'].touched">
+                <small *ngIf="bookForm1.controls['service'].errors?.['required']">Please Select The Service</small>
+              </div> -->
+          </td>
+          <td><label for="noOfDays">Days:</label></td>
+          <td>
+            <input type="text" placeholder="No of days" id="noOfDays" name="noOfDays" formControlName="noOfDays"
+              required maxlength="1">
+            <div class="error" *ngIf="bookForm1.controls['noOfDays'].invalid && bookForm1.controls['noOfDays'].dirty">
+              <small *ngIf="bookForm1.controls['noOfDays'].errors?.['required']">Defaultly it should be considered as 1
+                day</small>
+              <small *ngIf="bookForm1.controls['noOfDays'].errors?.['pattern']">Please Enter correct days</small>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="totalprice" colspan="2">
+            <div class="bookform-price">
+              <p>Actual price </p>
+              <p class="actual-price">{{ActualPrice | currency:'INR'}}</p>
+            </div>
+            <div class="bookform-price">
+              <p>Discount price </p>
+              <p class="discount-form-price">{{DiscountPrice | currency:'INR'}}</p>
+            </div>
+
+          </td>
+
+
+
+        </tr>
+        <tr class="totalprice-amount">
+          <td><label for="totalprice">Total price:</label></td>
+          <td><input type="text" formControlName="totalprice" name="totalprice" id="totalprice" readonly>
+          </td>
+        </tr>
+
+
+      </table>
+    </div>
+
+    <button [disabled]="!bookForm1.valid" type="submit">Submit</button>
+
+  </form>
+
+</div>

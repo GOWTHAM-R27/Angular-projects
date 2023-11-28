@@ -1,0 +1,37 @@
+
+<div class="mainclass">
+  <span></span>
+  <div  class="mainImg">
+    <img src="/assets/img/wedding main.png" class="img1">
+    <div class="prg">
+        <p>
+            We promise on one thing, we give our best service to make "Memorable photoshoot".
+            We will guide you to choose the best location based on your ideas. We will guide you with greate look and comfort before shoot.
+            Creative photoshoot with great photographers and we will delivery on time.
+        </p>
+    </div>
+  </div>
+  <div class="mainclass1">
+    <div class="price"  >
+          <a routerLink="/booknow"  (click)="bookNow()"><img src="/assets/img/price.jpg" class="priceimg" width="250px" height="150px">
+
+            <div class="centered">{{ prices[1]?.WeddingPhoto | currency:'INR'}}</div>
+            <div class="Pcenter">per day</div>
+          <div style="position:relative;top: 10px;text-align: center; font-size: large;"><i class="fa fa-camera" style="color: black;" > Photos</i></div></a>
+      </div>
+     <div class="price"  >
+        <a routerLink="/booknow"  (click)="bookNow()"><img src="/assets/img/price.jpg" class="priceimg" width="250px" height="150px">
+
+          <div class="centered">{{ prices[1]?.WeddingVideo | currency:'INR'}}</div>
+          <div class="Pcenter">per day</div>
+        <div style="position:relative;top: 10px;text-align: center; font-size: large;"><i class="fa fa-video-camera" style="color: black;" > Videos</i></div></a>
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class="bookNow">
+    <button type="submit" routerLink="/booknow" (click)="bookNow()">Book Now</button>
+  </div>
+

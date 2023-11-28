@@ -1,0 +1,129 @@
+
+
+table{
+  margin-left: 40px;
+  background-color: skyblue;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.627);
+  color: black;
+  width: 96%;
+  border-collapse: collapse;
+}
+thead{
+  font-weight: bolder;
+  color: rgb(87, 87, 164);
+}
+td{
+  width: fit-content;
+  padding: 20px;
+  margin-left: 30px;
+  border: 1px solid rgba(245, 245, 245, 0.67);
+}
+h2{
+  margin-top: 80px;
+  margin-left: 40px;
+  color: #fff724;
+
+}
+span{
+  color: skyblue;
+}
+p{
+  color:#fff724;
+  font-size: x-large;
+  font-weight: bold;
+  margin-left: 40px;
+}
+.booking
+{
+  background-color:#ffffff;
+  color:  rgb(43, 41, 41);
+  border-collapse: collapse;
+  border: 2px solid rgb(60, 60, 60);
+}
+.booking thead{
+  border: 1px solid rgba(195, 195, 195, 0.67);
+}
+.booking td{
+  border-bottom: 1px solid rgba(109, 109, 109, 0.37);
+}
+i{
+  cursor: pointer;
+}
+
+/* ---------------Update price----------------*/
+
+.popup-price-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #252525;
+  color: white;
+  border: 2px solid whitesmoke;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.popup-price-form h3 {
+  margin-top: 0;
+  color: #fff724;
+  text-transform: uppercase;
+}
+
+.popup-price-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-price-form label {
+  margin-bottom: 8px;
+}
+
+.popup-price-form input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.popup-price-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-form button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+.Form-title
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*------------Booking controls--------------*/
+
+.cancel-button{
+  background-color: red;
+  color: white;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+.confirm-button{
+  background-color: skyblue;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+

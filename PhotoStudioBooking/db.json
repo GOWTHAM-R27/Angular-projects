@@ -1,0 +1,449 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Prices": [
+    {
+      "PreweddingPhoto": "6000",
+      "PreweddingVideo": "8000",
+      "id": 1
+    },
+    {
+      "WeddingPhoto": "10000",
+      "WeddingVideo": "12000",
+      "id": 2
+    },
+    {
+      "PortraitPhoto": "5000",
+      "PortraitVideo": "6000",
+      "id": 3
+    },
+    {
+      "EventsPhoto": "7000",
+      "EventsVideo": "13000",
+      "id": 4
+    },
+    {
+      "ProductsPhoto": "4000",
+      "ProductsVideo": "7000",
+      "id": 5
+    },
+    {
+      "TravelPhoto": "7000",
+      "TravelVideo": "12000",
+      "id": 6
+    }
+  ],
+  "DiscountPrice": [
+    {
+      "price": "4000",
+      "id": 1
+    }
+  ],
+  "DiscountPricePremium": [
+    {
+      "price": "10000",
+      "id": 1
+    }
+  ],
+  "About": [
+    {
+      "about": "We are providing many services like wedding, pre-wedding, portrait, and also used to shoot a wide variety of products. You can see the sample photography for each service which we are providing, and each service has different packages. We are very passionate about our work, which gives you the best moment of your life in a beautiful frame. Capture the beauty.",
+      "id": 1
+    }
+  ],
+  "ContactsEmail": [
+    {
+      "email": "2k19cse027@kiot.ac.in",
+      "id": 1
+    }
+  ],
+  "ContactsMobile": [
+    {
+      "mobileno": "9944962896",
+      "id": 1
+    }
+  ],
+  "ContactsAddress": [
+    {
+      "address": "Salem",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "username": "Admin27",
+      "mobileno": "9944962896",
+      "email": "admin@gmail.com",
+      "password": "admin@27",
+      "confirmpass": "admin@27",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "username": "arunkumar008",
+      "mobileno": "7788669955",
+      "email": "arun@gmail.com",
+      "password": "arun@08",
+      "confirmpass": "arun@08",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "username": "Obito27",
+      "mobileno": "9944962896",
+      "email": "gowtham@gmail.com",
+      "password": "maddy@27",
+      "confirmpass": "maddy@27",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "username": "gowtham27",
+      "mobileno": "6677889955",
+      "email": "abc@gmail.com",
+      "password": "Deebak@16",
+      "confirmpass": "Deebak@16",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "username": "Deebakraaj35",
+      "mobileno": "7904779059",
+      "email": "god@gmail.com",
+      "password": "Deebak@16",
+      "confirmpass": "Deebak@16",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "username": "Gowsick26",
+      "mobileno": "8768864572",
+      "email": "gowsick@gmail.com",
+      "password": "Gowsick@26",
+      "confirmpass": "Gowsick@26",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "username": "Pooja27",
+      "mobileno": "7010909855",
+      "email": "pooja@gmail.com",
+      "password": "pooja@27",
+      "confirmpass": "pooja@27",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "username": "Gowtham27",
+      "mobileno": "6764435678",
+      "email": "gowtham27@gmail.com",
+      "password": "gowtham@27",
+      "confirmpass": "gowtham@27",
+      "role": "user",
+      "id": 8
+    },
+    {
+      "username": "Gopinath25",
+      "mobileno": "7010682703",
+      "email": "gopinathan@gmail.com",
+      "password": "gopi@25",
+      "confirmpass": "gopi@25",
+      "role": "user",
+      "id": 9
+    },
+    {
+      "username": "sandy15",
+      "mobileno": "9876545678",
+      "email": "sandy@gmail.com",
+      "password": "sandy@15",
+      "confirmpass": "sandy@15",
+      "role": "user",
+      "id": 10
+    }
+  ],
+  "Booking": [
+    {
+      "firstName": "Gowtham27",
+      "mobileno1": "6764435678",
+      "email": "gowtham27@gmail.com",
+      "date": "2023-07-27T12:29",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Pre wedding",
+      "noOfDays": 1,
+      "totalprice": 14000,
+      "id": 1,
+      "status": "canceled",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gowtham27",
+      "mobileno1": "6764435678",
+      "email": "gowtham27@gmail.com",
+      "date": "2023-07-30T09:37",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Wedding",
+      "noOfDays": 1,
+      "totalprice": 22000,
+      "id": 2,
+      "status": "canceled",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gowtham27",
+      "mobileno1": "6764435678",
+      "email": "gowtham27@gmail.com",
+      "date": "2023-08-06T13:47",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Wedding",
+      "noOfDays": 1,
+      "totalprice": 22000,
+      "id": 3,
+      "status": "canceled",
+      "reSendRequestCount": 3
+    },
+    {
+      "firstName": "Gowtham27",
+      "mobileno1": "6764435678",
+      "email": "gowtham27@gmail.com",
+      "date": "2023-08-05T13:58",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Pre wedding",
+      "noOfDays": 1,
+      "totalprice": 14000,
+      "reSendRequestCount": 3,
+      "id": 4,
+      "status": "canceled"
+    },
+    {
+      "firstName": "Gowtham27",
+      "mobileno1": "6764435678",
+      "email": "gowtham27@gmail.com",
+      "date": "2023-08-06T14:13",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Portrait",
+      "noOfDays": 1,
+      "totalprice": 11000,
+      "reSendRequestCount": 3,
+      "id": 5,
+      "status": "canceled"
+    },
+    {
+      "firstName": "arunkumar008",
+      "mobileno1": "7788669955",
+      "email": "arun@gmail.com",
+      "date": "2023-08-06T20:34",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Pre wedding",
+      "noOfDays": "2",
+      "totalprice": 24000,
+      "reSendRequestCount": 0,
+      "id": 6,
+      "status": "canceled"
+    },
+    {
+      "firstName": "arunkumar008",
+      "mobileno1": "7788669955",
+      "email": "arun@gmail.com",
+      "date": "2023-08-06T20:35",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Portrait",
+      "noOfDays": 1,
+      "totalprice": 11000,
+      "reSendRequestCount": 2,
+      "id": 7,
+      "status": "confirmed",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "arunkumar008",
+      "mobileno1": "7788669955",
+      "email": "arun@gmail.com",
+      "date": "2023-08-19T23:31",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Portrait",
+      "noOfDays": "5",
+      "totalprice": 45000,
+      "reSendRequestCount": 2,
+      "id": 8,
+      "status": "confirmed",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gopinath25",
+      "mobileno1": "7010682703",
+      "email": "gopinathan@gmail.com",
+      "date": "2023-08-06T09:00",
+      "pAddress": "Ammapet",
+      "eAddress": "Yercard",
+      "service": "Portrait",
+      "noOfDays": "2",
+      "totalprice": 18000,
+      "reSendRequestCount": 0,
+      "id": 9,
+      "status": "canceled",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gopinath25",
+      "mobileno1": "7010682703",
+      "email": "gopinathan@gmail.com",
+      "date": "2023-08-19T21:11",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Wedding",
+      "noOfDays": "5",
+      "totalprice": 100000,
+      "reSendRequestCount": 3,
+      "id": 10,
+      "status": "canceled"
+    },
+    {
+      "firstName": "Gopinath25",
+      "mobileno1": "7010682703",
+      "email": "gopinathan@gmail.com",
+      "date": "2023-08-20T11:16",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Travel",
+      "noOfDays": "1",
+      "totalprice": 19000,
+      "reSendRequestCount": 0,
+      "id": 11,
+      "status": "confirmed",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "sandy15",
+      "mobileno1": "9876545678",
+      "email": "sandy@gmail.com",
+      "date": "2023-08-18T09:00",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Wedding",
+      "noOfDays": "2",
+      "totalprice": 40000,
+      "reSendRequestCount": 0,
+      "id": 12,
+      "status": "confirmed",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gowtham",
+      "mobileno1": "9944962896",
+      "email": "abc@gmail.com",
+      "date": "2023-08-21T08:05",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Pre wedding",
+      "noOfDays": 1,
+      "totalprice": 14000,
+      "reSendRequestCount": 0,
+      "id": 13,
+      "status": "confirmed",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gowtham",
+      "mobileno1": "8148983466",
+      "email": "abc@gmail.com",
+      "date": "2023-08-19T08:30",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Portrait",
+      "noOfDays": 1,
+      "totalprice": 11000,
+      "reSendRequestCount": 1,
+      "id": 14,
+      "status": "confirmed",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gowtham",
+      "mobileno1": "8148983466",
+      "email": "abc@gmail.com",
+      "date": "2023-08-20T08:33",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Events",
+      "noOfDays": 1,
+      "totalprice": 20000,
+      "reSendRequestCount": 0,
+      "id": 15,
+      "status": "canceled",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gowtham",
+      "mobileno1": "9944962896",
+      "email": "abc@gmail.com",
+      "date": "2023-08-13T13:48",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Products",
+      "noOfDays": 1,
+      "totalprice": 11000,
+      "reSendRequestCount": 0,
+      "id": 16,
+      "status": "confirmed",
+      "paymentStatus": "Payment Done"
+    },
+    {
+      "firstName": "Gowtham",
+      "mobileno1": "9944962896",
+      "email": "abc@gmail.com",
+      "date": "2023-09-29T05:00",
+      "pAddress": "Salem",
+      "eAddress": "Salem",
+      "service": "Wedding",
+      "noOfDays": "2",
+      "totalprice": 40000,
+      "reSendRequestCount": 0,
+      "id": 17,
+      "status": "confirmed",
+      "paymentStatus": "Payment Done"
+    }
+  ],
+  "Feedback": [
+    {
+      "name": "Gowtham",
+      "email": "gowtham@gmail.com",
+      "feedback": "Nice",
+      "id": 1
+    },
+    {
+      "name": "Gopinath",
+      "email": "gopi@gmail.com",
+      "feedback": "Good",
+      "id": 2
+    },
+    {
+      "name": "Deebak",
+      "email": "god@gmail.com",
+      "feedback": "Amazing works",
+      "id": 3
+    }
+  ]
+}

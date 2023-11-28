@@ -1,0 +1,142 @@
+.body{
+  height: 46rem;
+}
+.container {
+  margin: 0 auto;
+
+  margin-top: 90px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  max-width: 100%;
+  width: 500px;
+
+}
+
+.header {
+  border-bottom: 2px solid white;
+  background-color: skyblue;
+  padding: 5px 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.form {
+  background-color: rgb(185, 183, 183);
+  padding: 30px 60px;
+}
+
+.form-control {
+  /* margin-bottom: 10px;
+  padding-bottom: 30px; */
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.form-control input {
+  display: block;
+  border: none;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+.form-control input:focus{
+  outline: none;
+  border: 2px solid blue;
+  border-radius: 4px;
+}
+.form button{
+  background-color: black;
+  border: none;
+  color: white;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.header1 {
+  border-top: 2px solid white;
+  background-color: skyblue;
+  padding: 5px 40px;
+  justify-content: center;
+  text-align: center;
+}
+.error{
+  color: red;
+
+}
+.good{
+  color: green;
+  font-weight: bold;
+}
+.fp-name{
+  margin-top: 20px;
+}
+footer {
+  /* background-image: url("https://e0.pxfuel.com/wallpapers/247/808/desktop-wallpaper-nature-sunset-yellow-aesthetic-sunset.jpg"); */
+background-image: url("https://4kwallpapers.com/images/wallpapers/sunset-moon-river-mountains-gradient-background-peach-4480x2520-2528.jpg");
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-section {
+  margin-top: 10px;
+  width: 30%;
+}
+.footer-section:nth-child(2) {
+  margin-top: 10px;
+  width: 30%;
+  height: auto;
+  margin-left: 110px;
+}
+.footer-section:nth-child(3) {
+  margin-top: 10px;
+  width: 50%;
+  height: auto;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(225, 236, 142, 0.867);
+  color: rgba(219, 215, 216, 0.867);
+  width: max-content;
+  padding: 0px 10px 5px 0px;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}

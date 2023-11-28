@@ -1,0 +1,582 @@
+
+
+*{
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+
+h1{
+  position: fixed;
+  margin-top: 10px;
+  color: #fff724;
+  z-index: 2000;
+}
+span{
+  color: skyblue;
+}
+
+.nav{
+  position: fixed;
+  width: 100%;
+  background-color: rgb(48, 47, 47);
+  padding: 20px;
+  align-items:center;
+  justify-content:right;
+  text-align: right;
+  margin: 0 auto;
+
+
+}
+.nav a{
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  text-decoration: none;
+  color: #fff724;
+  font-size: large;
+}
+.nav a:hover{
+  background-color: #fff724;
+  color: black;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+.p1 {
+  color: #fff724;
+  padding: 10px 50px;
+  font-size: large;
+}
+
+.p1:hover {
+  color: black;
+  cursor: pointer;
+  background-color: #fff724;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: -7px;
+  top: 27px;
+  background-color: #f9f9f9;
+  color: black;
+  width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  text-align: center;
+}
+
+.dropdown-content p {
+  padding: 5px 5px;
+}
+
+#sam {
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+
+#sam:hover {
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: grey;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin-top: 50px;
+  margin-left: 480px; */
+  margin:0 auto;
+  align-items: center;
+}
+.studio{
+  color: skyblue;
+}
+h3{
+  color: #fff724;
+  font-size:60px;
+  margin-top: 100px;
+  animation: fadeIn 0.8s;
+}
+@keyframes fadeIn {
+
+  from {
+		opacity: 0;
+		transform: translate3d(0, -5%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+span{
+  color: #fff724;
+}
+/* .p1 {
+  color: white;
+  font-size:large;
+} */
+/* .images{
+  justify-content: right;
+  transform: translate(260%,-60%);
+} */
+.about{
+  font-family: sans-serif ;
+  box-sizing: border-box;
+  width: 820px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  color: rgb(255, 255, 255);
+  margin: 0 auto;
+  font-size: large;
+}
+h2{
+  border-bottom: 2px solid #fff724;
+  font-size: x-large;
+  animation: fadeInh2 0.8s;
+  padding: 5px;
+}
+
+@keyframes fadeInh2 {
+
+  from {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+.about p{
+  animation: fadeInP 0.8s;
+}
+@keyframes fadeInP {
+
+  from {
+		opacity: 0;
+		transform: translate3d(0, 30%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+
+aside{
+   margin-top: -2450px;
+   position: fixed;
+   margin-left: -30px;
+   font-size: xx-large;
+   color: #fff724;
+   background-color: rgb(25, 25, 25);
+   width: fit-content;
+   height: max-content;
+   padding: 10px;
+}
+aside ul li{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 10px;
+   /* position: fixed; */
+}
+aside ul li:hover #aside-icons{
+  position: relative;
+  /* margin-top: -10px; */
+  margin-left: 10px;
+
+  border-radius: 50%;
+  justify-content: center;
+  animation: fade 0.1ms ease-in-out ;
+
+}
+@keyframes fade {
+  100%{
+    filter: hue-rotate(360deg);
+    font-size: small;
+  }
+
+}
+footer {
+  /* background-image: url("https://e0.pxfuel.com/wallpapers/247/808/desktop-wallpaper-nature-sunset-yellow-aesthetic-sunset.jpg"); */
+background-image: url("https://4kwallpapers.com/images/wallpapers/sunset-moon-river-mountains-gradient-background-peach-4480x2520-2528.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-section {
+  margin: 10px;
+  /* width: calc(25% - 20px); */
+  width: 100%;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  width: max-content;
+  border-bottom: 2px solid rgba(225, 236, 142, 0.867);
+  color: rgba(255, 242, 0, 0.867);
+}
+
+.footer-section p {
+  margin: 5px 0;
+  color: white;
+}
+
+.map-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.footer-section-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px 0;
+  width: 100%;
+}
+input[type=text],
+input[type=email]{
+  padding: 5px;
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #383842;
+  border: 2px solid wheat;
+  border-style: dotted;
+  border-radius: 4px;
+  color: white;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+form button:disabled {
+  padding: 5px 10px;
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  cursor: not-allowed;
+}
+form button {
+  padding: 5px 10px;
+  background-color: #fff724;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.error {
+  color: rgb(208, 255, 0);
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+}
+
+.photographers{
+  margin-top: 130px;
+  /* background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/04/green-aesthetic-wallpaper-download-full-6.jpg"); */
+  /* background-image: url("https://img.freepik.com/free-vector/sunset-ocean-sea-scenery-nature-landscape-purple-clouds-orange-sky-with-flying-gulls-shining-sun-go-down-mountains-rocks-calm-water-surface-evening-cartoon-vector-background_107791-7821.jpg"); */
+  background-image: url('/assets/img/photographerBg.png');
+  width: 100%;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.pgDetails{
+  display: flex;
+  flex-direction: row;
+  padding: 20px 30px;
+}
+.circle-1{
+  width: 50px ;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 90px;
+  background-color: white;
+  position: absolute;
+  /* border: 1px solid black; */
+  margin-top: -520px;
+}
+.circle-2{
+  width: 40px ;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-color: white;
+  position: absolute;
+  /* border: 1px solid black; */
+  margin-top: -510px;
+}
+.camera-back{
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  background-color: white;
+  /* border: 1px solid black; */
+  margin-top: -400px;
+  margin-left: -220px;
+  border-radius: 0px 1900px 100px 0px;
+}
+.staffs{
+  margin-top: -45px;
+  font-size:x-large;
+  font-weight:bold;
+  background-color: white;
+
+  padding:0px 30px;
+  border-radius: 70px 5px 0px 0px;
+  color: #000000;
+}
+.staffs p{
+  border-bottom: 3px solid #484845 ;
+  padding: 5px;
+}
+.photographer1,
+.photographer2,
+.photographer3,
+.photographer4{
+  background-color: rgb(44, 42, 42);
+  color: white;
+  margin-right: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  padding-bottom: 10px;
+  border-radius: 4px;
+}
+
+.Services-title {
+  background-image: url("https://cutewallpaper.org/29/dual-background-wallpaper/132608817.jpg");
+  /* background-image: url("https://wallpapers.com/images/hd/blue-anime-aesthetic-desktop-hijoy48nw948vxbz.jpg"); */
+  background-size: cover;
+
+  margin: 0 auto;
+  margin-top: -20px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Services-title .p2 {
+  padding: 10px 20px;
+  font-size: x-large;
+  border-bottom: 3px solid #fff724;
+  width: max-content;
+  margin: 0 auto;
+  color: #fff724;
+
+}
+
+tr,
+td {
+  padding: 10px 10px;
+
+}
+
+.img1 {
+  background-color: #f9f9f9;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.img1:hover{
+  filter: brightness(0.8);
+  transform: scale(1.05);
+}
+
+
+.img2 {
+
+  width: fit-content;
+  padding: 5px;
+
+}
+
+.works {
+  /* background-image: url("https://i.pinimg.com/1200x/5e/af/54/5eaf543b8cd14fc44e940bd6aba715f6.jpg"); */
+  /* background-image: url("https://w.forfun.com/fetch/c8/c87673088b0258db564025f6bb3257e6.jpeg"); */
+  /* background-image: url("https://www.pixelstalk.net/wp-content/uploads/images6/Aesthetic-Wallpaper-For-Laptop-Wallpaper-High-Quality.jpg"); */
+  background-image: url("https://marketplace.canva.com/EAE6inHtCyU/1/0/1600w/canva-pink-aesthetic-desktop-wallpaper-WioSXL9lZF0.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+}
+
+.galtitle {
+  border-bottom: 2px solid #000000;
+  padding: 10px 20px;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  align-items: center;
+  margin: 0 auto;
+  color: black;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+  h3 {
+    font-size: 40px;
+  }
+
+
+  .pgDetails {
+    flex-direction: column;
+  }
+
+  .photographer1,
+  .photographer2,
+  .photographer3,
+  .photographer4 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .table1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table1 td {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .img2 {
+    margin: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  aside {
+    position: static;
+    margin-top: 20px;
+    margin-left: 0;
+    font-size: large;
+    color: #fff724;
+    background-color: rgb(25, 25, 25);
+    width: 100%;
+    height: max-content;
+    padding: 10px;
+  }
+}
+.Gallery-2 {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main_view {
+  flex: 1;
+  max-width: 300px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main_view img {
+  width: 400px;
+  height: 630px;
+  object-fit: cover;
+}
+
+.side_view {
+  display: grid;
+  background-size: cover;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 800px;
+  margin-left: 60px;
+}
+
+.side_view img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.side_view img:hover {
+  transform: scale(1.05);
+}
+

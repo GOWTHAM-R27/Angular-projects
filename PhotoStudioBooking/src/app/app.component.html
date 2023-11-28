@@ -1,0 +1,68 @@
+<!--
+
+
+****************************************************************************************************************
+|                                                                                                              |
+*                                                                                                              *
+----------------------------------TITLE : Online Photo Studio Booking-------------------------------------------
+----------------------------------AUTHOR : Gowtham R------------------------------------------------------------
+----------------------------------LAST EDITED DATE : 19-09-2023-------------------------------------------------
+*                                                                                                              *
+|                                                                                                              |
+****************************************************************************************************************
+
+-->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<body>
+  <header>
+    <h1><a routerLink="/" style="text-decoration: none; color: #fff724;"><img src="/assets/img/logo.png" alt="logo"
+      style="height:30px; width:30px;">Hinata <span class="studio">Studios</span></a></h1>
+    <nav class="nav">
+
+      <a routerLink="/" [ngClass]="{'active': isCurrentPage('/')}"><i class='fas fa-home'></i>&nbsp;&nbsp;Home</a>
+      <a routerLink="/admin" *ngIf="currentlogin.isadmin()" [ngClass]="{'active': isCurrentPage('/admin')}"><i
+          class="fas fa-th"></i>&nbsp;&nbsp;Dashboard</a>
+      <a routerLink="/portfolio" *ngIf="!currentlogin.isadmin()" [ngClass]="{'active': isCurrentPage('/portfolio')}"><i
+          class='fa fa-vcard'></i>&nbsp;&nbsp;Portfolio</a>
+      <a routerLink="/gallery" *ngIf="!currentlogin.isadmin()" [ngClass]="{'active': isCurrentPage('/gallery')}"><i
+          class='fa fa-leaf'></i>&nbsp;&nbsp;Gallery</a>
+      <div class="dropdown" *ngIf="!currentlogin.isadmin()">
+        <span class="p1"><i class="fas fa-fire"></i>&nbsp;&nbsp;Services</span>
+        <div class="dropdown-content">
+          <p routerLink="/pre_wedding" id="sam">
+            Pre wedding
+          </p>
+          <p routerLink="/wedding" id="sam">
+            Wedding
+          </p>
+          <p routerLink="/portrait" id="sam">
+            Portrait
+          </p>
+          <p routerLink="/events" id="sam">
+            Events
+          </p>
+          <p routerLink="/products" id="sam">
+            Products
+          </p>
+          <p routerLink="/travel" id="sam">
+            Travel
+          </p>
+        </div>
+      </div>
+
+      <a routerLink="/login" *ngIf="!currentlogin.islogin()" [ngClass]="{'active': isCurrentPage('/login')}"><i
+          class='fas fa-sign-in-alt'></i>&nbsp;&nbsp;Login</a>
+      <a routerLink="/profile" *ngIf="currentlogin.islogin()" [ngClass]="{'active': isCurrentPage('/profile')}"><i
+          class='fa fa-user-circle'></i>&nbsp;&nbsp;{{currentlogin.getname()["username"]}}</a>
+      <a *ngIf="currentlogin.islogin()" (click)="logout()" style="cursor: pointer;" class="profilediv"><i
+          class='fas fa-sign-out-alt'></i>&nbsp;&nbsp;Logout</a>
+
+    </nav>
+
+  </header>
+  <router-outlet></router-outlet>
+</body>

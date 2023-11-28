@@ -1,0 +1,272 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+  <!-----------------------Logo and name--------------------------->
+
+  <div class="content">
+    <h3><img src="/assets/img/logo.png" style="height:100px; width:100px;">Hinata <span class="studio">Studios</span>
+    </h3>
+  </div>
+
+  <!-----------------------About us--------------------------->
+
+  <div class="about">
+    <h2>About us</h2>
+    <p class="aboutP">
+      We are providing many services like wedding, pre wedding, portrait and also used to shoot a wide variety of
+      products etc.
+      You can see the sample photography for each service which we are providing and each service has a different
+      packages.
+      Each and every photography consists of work of our best photographers which is also provided with a suitable price
+      accordingly.
+      You can complete your payment once the work is finished. Our staffs are more flexible with the services which we
+      provide and we are
+      very passionate about our work which gives you the best moment of your life in a beautiful frame. We can guide you
+      in taking the best and
+      suitable photo according to the surrounding or you can also be the one to choose your own way of making the best
+      out of you in a photo.
+      Just contact us to capture the beauty.
+    </p>
+  </div>
+
+  <!-----------------------Our team members--------------------------->
+
+  <div class="photographers">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="camera-back"></div>
+    <div class="staffs"><p>Our Team</p></div>
+    <section class="pgDetails">
+      <div class="photographer1">
+        <img src="/assets/img/Mega.jpg" alt=""
+          style="border-radius:50%; width: 160px; height: 240px; border-top-left-radius: 4px; border-top-right-radius: 4px;">
+        <p>VICKY</p>
+
+      </div>
+      <div class="photographer2">
+        <img src="/assets/img/Jaya.jpg" alt=""
+          style="border-radius: 50%; width: 160px; height: 240px; border-top-left-radius: 4px; border-top-right-radius: 4px;">
+        <p>POOJA</p>
+
+      </div>
+      <div class="photographer3">
+        <img src="/assets/img/God.jpg" alt=""
+          style="border-radius: 50%; width: 160px; height: 240px; border-top-left-radius: 4px; border-top-right-radius: 4px;">
+        <p>DEEBAKRAAJ</p>
+
+      </div>
+      <div class="photographer4">
+        <img src="/assets/img/Gowsick.jpg" alt=""
+          style="border-radius: 50%; width: 160px; height: 240px; border-top-left-radius: 4px; border-top-right-radius: 4px;">
+        <p>GOWSICK</p>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-----------------------Services--------------------------->
+
+  <div class="Services-title">
+    <p class="p2">
+      Services
+    </p>
+    <table class="table1" style="justify-content: center; left: 8%;border-spacing: 50px; margin: 0 auto;">
+      <tr>
+
+        <!------------------------Pre wedding-------------------------->
+
+
+        <td>
+          <div class="img1">
+            <a routerLink="/pre_wedding"><img src="/assets/img/PreWedding.jpg" width="150px" height="190px">
+              <div style="position:relative;top: 10px;text-align: center; font-size: large;"><i class="fa fa-camera"
+                  style="color: black;"> Pre wedding</i></div>
+            </a>
+          </div>
+        </td>
+
+        <!------------------------Wedding-------------------------->
+
+        <td>
+          <div class="img1">
+            <a routerLink="/wedding"><img src="/assets/img/wedding.jfif" width="150px" height="190px">
+              <div style="position:relative;top: 10px;text-align: center; font-size: large;"><i class="fa fa-camera"
+                  style="color: black;"> Wedding</i></div>
+            </a>
+          </div>
+        </td>
+
+        <!------------------------Portrait-------------------------->
+
+        <td>
+          <div class="img1">
+            <a routerLink="/portrait"><img src="/assets/img/Portrait.jpg" width="150px" height="190px">
+              <div style="position:relative;top: 10px;text-align: center; font-size: large;"><i class="fa fa-camera"
+                  style="color: black;"> Portrait</i></div>
+            </a>
+          </div>
+        </td>
+
+        <!------------------------Events-------------------------->
+
+        <td>
+          <div class="img1">
+            <a routerLink="/events"><img src="/assets/img/Event.png" width="150px" height="190px">
+              <div style="position:relative;top: 10px;text-align: center; font-size: large;"><i class="fa fa-camera"
+                  style="color: black;"> Events</i></div>
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <table style="justify-content: center; border-spacing: 50px; margin: -40px auto;">
+      <tr>
+
+        <!------------------------Products-------------------------->
+
+        <td>
+          <div class="img1">
+            <a routerLink="/products"><img src="/assets/img/Product.jpg" width="150px" height="190px">
+              <div style="position:relative;top: 10px;text-align: center; font-size: large;"><i class="fa fa-camera"
+                  style="color: black;"> Products</i></div>
+            </a>
+          </div>
+        </td>
+
+        <!------------------------Travel-------------------------->
+
+        <td>
+          <div class="img1">
+            <a routerLink="/travel"><img src="/assets/img/Travel.jpeg" width="150px" height="190px">
+              <div style="position:relative;top: 10px;text-align: center; font-size: large;"><i class="fa fa-camera"
+                  style="color: black;"> Travel</i></div>
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!------------------------Gallery-------------------------->
+
+  <div class="works">
+    <p class="galtitle">Gallery</p>
+    <div class="Gallery-2">
+
+      <!------------------------Gallery main image-------------------------->
+
+      <div class="main_view">
+        <img [src]="mainImageSrc" id="main" alt="IMAGE" class="mainimage">
+      </div>
+
+      <!------------------------Gallery side images-------------------------->
+
+      <div class="side_view">
+        <img src="/assets/img/productsImage1.jpg" (click)="changeImage('/assets/img/productsImage1.jpg')">
+        <img src="/assets/img/PreWedding.jpg" (click)="changeImage('/assets/img/PreWedding.jpg')">
+        <img src="/assets/img/wedding.jfif" (click)="changeImage('/assets/img/wedding.jfif')">
+        <img src="/assets/img/portraitimages4.jpg" (click)="changeImage('/assets/img/portraitimages4.jpg')">
+        <img src="/assets/img/travelimage3.jpg" (click)="changeImage('/assets/img/travelimage3.jpg')">
+        <img src="/assets/img/portimage1.jpg" (click)="changeImage('/assets/img/portimage1.jpg')">
+        <img src="/assets/img/portraitimage5.jpg" (click)="changeImage('/assets/img/portraitimage5.jpg')">
+        <img src="/assets/img/weddingimage1.jpg" (click)="changeImage('/assets/img/weddingimage1.jpg')">
+        <img src="/assets/img/preweddingimage1.jpg" (click)="changeImage('/assets/img/preweddingimage1.jpg')">
+        <img src="/assets/img/child1.jpg" (click)="changeImage('/assets/img/child1.jpg')">
+        <img src="/assets/img/productimage1.jpg" (click)="changeImage('/assets/img/productimage1.jpg')">
+        <img src="/assets/img/Event.png" (click)="changeImage('/assets/img/Event.png')">
+
+      </div>
+    </div>
+
+  </div>
+
+  <!------------------------Aside icons-------------------------->
+
+  <aside>
+    <ul type="none">
+      <li><a href="https://instagram.com/hinata_studios?igshid=MzRlODBiNWFlZA=="
+          style="text-decoration: none;color:#fff724;"><i id="aside-icons" class="fa fa-instagram"></i></a></li>
+      <li><a href="https://wa.me/qr/J4D5S7W7ATT4F1" style="text-decoration: none;color:#fff724;"><i id="aside-icons"
+            class="fa fa-whatsapp"></i></a></li>
+      <li><a href="mailto:2k19cse027@kiot.ac.in" style="text-decoration: none;color:#fff724;"><i id="aside-icons"
+            class="fa fa-envelope"></i></a></li>
+    </ul>
+  </aside>
+
+  <!------------------------Discount image-------------------------->
+
+  <div class="discount-image" style="background-color: white;padding-top: 20px;">
+    <img src="/assets/img/Discount_background.png" alt="discount background"
+      style="background-size: cover; width: 100%; height:100%;">
+  </div>
+
+  <!------------------------Footer-------------------------->
+
+  <footer>
+
+    <!------------------------About us-------------------------->
+
+    <div class="footer-section">
+      <h4>About Us</h4>
+      <p style="text-align: justify;">{{aboutUs}}</p>
+
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: {{contactEmail}}</p>
+        <p>Mobile no: {{contactMobileNo}}</p>
+        <p>Address: {{contactAddress}}</p>
+      </div>
+    </div>
+
+    <!------------------------Map-------------------------->
+
+    <div class="footer-section">
+      <h4>Map</h4>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125042.34464744675!2d78.06825659196454!3d11.653726630748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ccf52cba0b%3A0xee9989007068ca47!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1680280355533!5m2!1sen!2sin"
+          width="100%" height="200" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </div>
+
+    <!------------------------Feedback form-------------------------->
+
+    <div class="footer-section">
+      <h4>Feedback</h4>
+      <div class="footer-section-form">
+        <form (submit)="submitForm()" [formGroup]="feedBackForm">
+          <div class="form-control">
+            <label>Name *</label>
+            <input type="text" formControlName="name">
+            <div class="error"
+              *ngIf="feedBackForm.controls['name'].dirty && feedBackForm.controls['name'].hasError('required')">Please
+              enter a name</div>
+          </div>
+          <div class="form-control">
+            <label>Email *</label>
+            <input type="email" formControlName="email">
+            <div class="error"
+              *ngIf="feedBackForm.controls['email'].dirty && feedBackForm.controls['email'].hasError('required')">Please
+              enter an email</div>
+            <div class="error"
+              *ngIf="feedBackForm.controls['email'].dirty && feedBackForm.controls['email'].hasError('pattern')">Please
+              enter a valid email (gmail only)</div>
+          </div>
+          <div class="form-control">
+            <label>Feedback *</label>
+            <textarea formControlName="feedback" cols="22" rows="5"></textarea>
+            <div class="error"
+              *ngIf="feedBackForm.controls['feedback'].dirty && feedBackForm.controls['feedback'].hasError('required')">
+              Please enter feedback</div>
+          </div>
+          <button [disabled]="!feedBackForm.valid">Submit Feedback</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+</body>

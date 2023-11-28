@@ -1,0 +1,213 @@
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<div class="wholeDiv">
+
+ <!----------------------------------User profile card--------------------------->
+
+  <div class="container">
+    <div class="profile-card">
+      <div class="profile-header">
+        <h1>My Account</h1>
+        <img src="https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png" alt="Profile Picture">
+      </div>
+      <div class="profile-details">
+        <h2>{{  currentlogin.getname()["username"] }}</h2>
+        <p>Email: {{  currentlogin.getname()["email"] }}</p>
+        <p>Mobile no: {{  currentlogin.getname()["mobileno"] }}</p>
+
+      </div>
+    </div>
+  </div>
+
+   <!----------------------------------My bookings--------------------------->
+
+  <div class="Wholeprofile" >
+    <p class="my-booking-title">My bookings</p>
+
+    <div class="wholeBookDiv">
+
+       <!----------------------------------My booking details--------------------------->
+
+      <div *ngFor="let bookingItem of booking" class="bookinfo">
+
+        <div class="bookdiv">
+          <table class="booking">
+            <thead>
+              <td colspan="2" style="text-align: center;">
+                <p class="Booking-information-title">Booking Information</p>
+                <marquee width="100%" direction="left">
+                  <ng-container *ngIf="confirmBookingMessage(bookingItem)">{{ confirmBookingMessage(bookingItem)}}</ng-container>
+                  <ng-container *ngIf="confirmPaymentMessage(bookingItem)">{{ confirmPaymentMessage(bookingItem)}}</ng-container>
+                  <ng-container *ngIf="cancelAfterPaymentDone(bookingItem)">{{ cancelAfterPaymentDone(bookingItem)}}</ng-container>
+                  <ng-container *ngIf="cancelBeforePayment(bookingItem)">{{ cancelBeforePayment(bookingItem)}}</ng-container>
+                </marquee>
+              </td>
+            </thead>
+            <tr>
+              <td>Name: </td>
+              <td>{{ bookingItem.firstName }}</td>
+            </tr>
+            <tr>
+              <td>Email: </td>
+              <td>{{ bookingItem.email }}</td>
+            </tr>
+            <tr>
+              <td>Mobile no: </td>
+              <td>{{ bookingItem.mobileno1 }}</td>
+            </tr>
+            <tr>
+              <td>Date: </td>
+              <td>{{ bookingItem.date}}</td>
+            </tr>
+            <tr>
+              <td>Event Place: </td>
+              <td>{{ bookingItem.eAddress }}</td>
+            </tr>
+            <tr>
+              <td>Service: </td>
+              <td>{{ bookingItem.service }}</td>
+            </tr>
+
+            <tr>
+              <td>No of Days: </td>
+              <td>{{ bookingItem.noOfDays }}</td>
+            </tr>
+            <tr>
+              <td>Amount: </td>
+              <td>{{ bookingItem.totalprice | currency:'INR' }}</td>
+            </tr>
+            <tr>
+              <td>Booking Status: </td>
+              <td>{{ getBookingStatus(bookingItem) }}</td>
+            </tr>
+            <tr>
+              <td>Payment Status: </td>
+              <td>{{ getPaymentStatus(bookingItem) }}</td>
+            </tr>
+
+          </table>
+
+
+           <!----------------------------------Payment section--------------------------->
+
+
+          <div class="paymentForm" *ngIf="isPaymentOptionVisible(bookingItem)">
+            <small class="payment-title">***Please complete the Payment***</small> <br>
+            <div class="Payment-option">
+              <button class="Payment-option-button" (click)="selectPaymentMethod('card')">Card</button>
+              <p>Or</p>
+              <button class="Payment-option-button" (click)="selectPaymentMethod('upi')">UPI</button>
+            </div>
+
+             <!----------------------------------Card payment--------------------------->
+
+            <form class="card-form" *ngIf="selectedPaymentMethod === 'card'" [formGroup]="paymentForm">
+              <label for="cardNumber">Card number</label>
+              <input type="text" formControlName="cardNumber" placeholder="Enter your card number">
+              <div *ngIf="paymentForm.controls['cardNumber'].invalid && paymentForm.controls['cardNumber'].dirty"
+                class="error">
+                <small *ngIf="paymentForm.controls['cardNumber'].errors?.['required']">Card Number is required.</small>
+                <small *ngIf="paymentForm.controls['cardNumber'].errors?.['pattern']">Card Number must be a 16-digit
+                  number.</small>
+              </div>
+
+              <label for="cvv">CVV</label>
+              <input type="text" formControlName="cvv" placeholder="Enter your CVV number">
+              <div *ngIf="paymentForm.controls['cvv'].invalid && paymentForm.controls['cvv'].dirty" class="error">
+                <small *ngIf="paymentForm.controls['cvv'].errors?.['required']">CVV is required.</small>
+                <small *ngIf="paymentForm.controls['cvv'].errors?.['pattern']">CVV must be a 3-digit number.</small>
+              </div>
+
+              <label for="expiryDate">Expiry Date</label>
+              <input type="text" formControlName="expiryDate" placeholder="mm/yyyy">
+              <div *ngIf="paymentForm.controls['expiryDate'].invalid && paymentForm.controls['expiryDate'].dirty"
+                class="error">
+                <small *ngIf="paymentForm.controls['expiryDate'].errors?.['required']">Expiry Date is required.</small>
+                <small *ngIf="paymentForm.controls['expiryDate'].errors?.['pattern']">Expiry Date must be in the format
+                  MM/YYYY.
+                </small>
+              </div>
+              <button type="submit" class="payment-button" [disabled]="!paymentForm.valid" (click)="confirmBooking(bookingItem.id)">Pay {{ bookingItem.totalprice | currency:'INR' }}</button>
+            </form>
+
+             <!----------------------------------Upi payment--------------------------->
+
+
+            <form  class="card-form" *ngIf="selectedPaymentMethod === 'upi'" [formGroup]="paymentForm2">
+              <label for="upiId">UPI ID</label>
+              <input type="text" formControlName="upiId" placeholder="Enter your UPI id">
+              <div *ngIf="paymentForm2.controls['upiId'].invalid && paymentForm2.controls['upiId'].dirty" class="error">
+                <small *ngIf="paymentForm2.controls['upiId'].errors?.['required']">UPI ID is required.</small>
+                <small *ngIf="paymentForm2.controls['upiId'].errors?.['pattern']">Invalid UPI ID.</small>
+              </div>
+
+              <label for="upiPin">UPI PIN</label>
+              <input type="password" formControlName="upiPin" placeholder="Enter your pin">
+              <div *ngIf="paymentForm2.controls['upiPin'].invalid && paymentForm2.controls['upiPin'].dirty"
+                class="error">
+                <small *ngIf="paymentForm2.controls['upiPin'].errors?.['required']">UPI PIN is required.</small>
+                <small *ngIf="paymentForm2.controls['upiPin'].errors?.['pattern']">Invalid UPI PIN.</small>
+              </div>
+              <button type="submit" class="payment-button" [disabled]="paymentForm2.invalid" (click)="confirmBooking(bookingItem.id)">Pay {{ bookingItem.totalprice | currency:'INR' }}</button>
+            </form>
+          </div>
+
+
+           <!----------------------------------Booking controls--------------------------->
+
+        </div>
+        <button class="changeBooking-Button" *ngIf="isChangeBookingVisible(bookingItem)"
+            (click)="changeBooking(bookingItem)">Re-send the request</button>
+
+          <button class="Cancel-Button" *ngIf="isPaymentButtonVisible(bookingItem)"
+            (click)="cancelBooking(bookingItem)">Cancel Booking</button>
+            <p *ngIf="bookingItem.reSendRequestCount>=3"> Your resend request limit is over</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!--------------------------Pop-up---------------------------->
+
+<div class="popup-message" *ngIf="showPaymentPopup" >
+  <div class="popup-content">
+    <div class="check-circle"><i class="fas fa-check"></i></div>
+    <h2>Payment completed successfully!</h2>
+    <h3>Thank you... &#128512;</h3>
+    <button class="popup-button" (click)="showPaymentPopup = false; navigateToHome()">Close</button>
+
+  </div>
+<!-- <img src="/assets/img/party_popper-1.gif" alt="" width="200px"> -->
+</div>
+
+
+
+ <!----------------------------------Footer--------------------------->
+
+<!-- <footer>
+  <div class="footer-section">
+    <h4>About Us</h4>
+    <p>We are providing many services like wedding, pre wedding, portrait and also used to shoot a wide variety of
+      products etc.
+      You can see the sample photography for each service which we are providing and each service has a different
+      packages.
+      You just contact us to capture the beauty.</p>
+  </div>
+  <div class="footer-section">
+    <h4>Contact Us</h4>
+    <p>Email: 2k19cse027@kiot.ac.in</p>
+    <p>Phone: 9944962896</p>
+    <p>Address: Salem</p>
+  </div>
+  <div class="footer-section">
+    <h4>Map</h4>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125042.34464744675!2d78.06825659196454!3d11.653726630748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ccf52cba0b%3A0xee9989007068ca47!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1680280355533!5m2!1sen!2sin"
+        width="500px" height="400px" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </div>
+</footer> -->
